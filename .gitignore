@@ -18,6 +18,11 @@
 /9-exercise-solidity-and-smart-contracts/Homework/artifacts/
 /9-exercise-solidity-and-smart-contracts/Lecture/artifacts/
 
+/10-hardhat-and-blockchain-interaction/Homework/contracts/artifacts/
+/10-hardhat-and-blockchain-interaction/Lecture/contracts/artifacts/
+/10-hardhat-and-blockchain-interaction/Lecture/artifacts/
+/10-hardhat-and-blockchain-interaction/Lecture/cache/
+/10-hardhat-and-blockchain-interaction/Lecture/node_modules/
 
 /11-debugging-and-deployment/Homework/contracts/artifacts/
 /11-debugging-and-deployment/Lecture/contracts/artifacts/
