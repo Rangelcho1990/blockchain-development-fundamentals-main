@@ -3,21 +3,20 @@
 /.deps
 .idea
 
-/Solidity Fundamentals/Homework/artifacts/
-/Solidity Fundamentals/Lecture/artifacts/
+/4-ethereum-and-smart-contracts-basics/Homework/artifacts/
+/4-ethereum-and-smart-contracts-basics/Lecture/artifacts/
 
-/Ethereum and Smart Contracts Basics/Homework/artifacts/
-/Ethereum and Smart Contracts Basics/Lecture/artifacts/
+/5-solidity-fundamentals/Homework/artifacts/
+/5-solidity-fundamentals/Lecture/artifacts/
 
+/6-inheritance-and-modularity/Homework/artifacts/
+/6-inheritance-and-modularity/Lecture/artifacts/
 
-/Inheritance and Modularity/Homework/artifacts/
-/Inheritance and Modularity/Lecture/artifacts/
+/7-smart-contracts-standards/Homework/artifacts/
+/7-smart-contracts-standards/Lecture/artifacts/
 
-/Smart Contracts Standards/Homework/artifacts/
-/Smart Contracts Standards/Lecture/artifacts/
-
-/Exercise - Solidity and Smart Contracts/Homework/artifacts/
-/Exercise - Solidity and Smart Contracts/Lecture/artifacts/
+/9-exercise-solidity-and-smart-contracts/Homework/artifacts/
+/9-exercise-solidity-and-smart-contracts/Lecture/artifacts/
 
 
 /11-debugging-and-deployment/Homework/contracts/artifacts/
