@@ -1,6 +1,7 @@
 /.states
 /.git
 /.deps
+.idea
 
 /Solidity Fundamentals/Homework/artifacts/
 /Solidity Fundamentals/Lecture/artifacts/
