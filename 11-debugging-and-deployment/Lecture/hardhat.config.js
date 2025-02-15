@@ -27,4 +27,8 @@ module.exports = {
   sourcify: {
     enabled: true,
   },
+  mocha: {
+    timeout: 20000,
+    parallel: true, // can not with Gas report
+  },
 };
