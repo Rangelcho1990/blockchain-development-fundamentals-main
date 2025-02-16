@@ -1,6 +1,11 @@
-# Auction House System
+# Staking Pool System
 
-A decentralized auction system consisting of an ERC721 token (NFT) and a AuctionHouse contract.
+A decentralized auction system consisting of an IERC20 token (NFT) and a StakingPool contract.
+
+## Env example
+WEB3_PROVIDER_URL=your_sepolia_rpc_url
+WEB3_PROVIDER_PRIVETE_KEY=your_private_key
+ETHERSCAN_API_KEY=your_etherscan_api_key
 
 ## Installation
 
@@ -37,12 +42,8 @@ npx hardhat coverage
 Deploy both contracts to Sepolia:
 
 ```bash
-npx hardhat deploy --owner <nft-owner-address> --network sepolia
+npx hardhat deploy --owner <owner-address> --network sepolia
 ```
-
-### Deployment Parameters
-
-- `owner`: address of the NFT contract owner
 
 ## Contract Verification
 
@@ -50,5 +51,5 @@ Contracts are automatically verified on Etherscan when deployed to Sepolia.
 
 ### Verified Contracts (Sepolia)
 
-- NFT: [0x0947fF392B6A8b2a6d553166ca9Ad3EfeB3BBB92](https://sepolia.etherscan.io/address/0x0947fF392B6A8b2a6d553166ca9Ad3EfeB3BBB92#code)
-- AuctionHouse: [0x6e9144337948077FDf207ad3b1d7aAa90110393F](https://sepolia.etherscan.io/address/0x6e9144337948077FDf207ad3b1d7aAa90110393F#code)
+- StakeX: []()
+- StakingPool: [0x385D016452b69aF22604F11dEc5297d6352396C5](https://sepolia.etherscan.io/address/0x385D016452b69aF22604F11dEc5297d6352396C5#code)

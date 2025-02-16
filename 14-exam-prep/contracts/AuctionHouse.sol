@@ -3,6 +3,7 @@ pragma solidity 0.8.25;
 
 import {IERC721} from "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
+import "hardhat/console.sol";
 
 struct Auction {
     uint256 tokenId;

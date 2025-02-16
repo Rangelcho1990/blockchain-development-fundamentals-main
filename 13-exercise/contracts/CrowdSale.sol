@@ -118,9 +118,7 @@ contract Crowdsale is Ownable {
         }
 
         // the value is in wei
-        uint256 tokensToReceive = (msg.value *
-            price *
-            (10 ** ICustomToken(token).decimals())) / 1 ether;
+        uint256 tokensToReceive = (msg.value *price * (10 ** ICustomToken(token).decimals())) / 1 ether;
 
         if (tokensToReceive == 0) {
             revert InputValueTooSmall();

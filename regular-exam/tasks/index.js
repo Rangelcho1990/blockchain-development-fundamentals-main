@@ -1,24 +1,24 @@
 const { task } = require("hardhat/config");
 
-task("deploy", "Deploys NFT and AuctionHouse contracts")
-  .addParam("owner", "Initial owner of NFT contract")
+task("deploy", "Deploys StakeX and StakingPool contracts")
+  .addParam("owner", "Initial owner of StakeX contract")
   .setAction(async (taskArgs, hre) => {
-    const [deployer] = await hre.ethers.getSigners();
-    console.log("Deploying contracts with account:", deployer.address);
+    // const [deployer] = await hre.ethers.getSigners();
+    // console.log("Deploying contracts with account:", deployer.address);
 
-    // CustomToken
-    const CustomToken = await hre.ethers.getContractFactory("NFT");
-    const customToken = await CustomToken.deploy(taskArgs.owner);
+    // // StakeX
+    // const StakeX = await hre.ethers.getContractFactory("StakeX");
+    // const stakeX = await StakeX.deploy(taskArgs.owner);
 
-    await customToken.waitForDeployment();
+    // await stakeX.waitForDeployment();
 
-    console.log("CustomToken deployed to:", await customToken.getAddress());
+    // console.log("StakeX deployed to:", await stakeX.getAddress());
 
-    // AuctionHouse
-    const AuctionHouse = await hre.ethers.getContractFactory("AuctionHouse");
-    const auctionHouse = await AuctionHouse.deploy();
-    await auctionHouse.waitForDeployment();
-    console.log("AuctionHouse deployed to:", await auctionHouse.getAddress());
+    // StakingPool
+    const StakingPool = await hre.ethers.getContractFactory("StakingPool");
+    const stakingPool = await StakingPool.deploy();
+    await stakingPool.waitForDeployment();
+    console.log("StakingPool deployed to:", await stakingPool.getAddress());
 
     // Verify contracts if on Sepolia
     if (hre.network.name === "sepolia") {
@@ -26,34 +26,34 @@ task("deploy", "Deploys NFT and AuctionHouse contracts")
 
       // Wait for a few block confirmations
       console.log("Waiting for block confirmations...");
-      await customToken.deploymentTransaction().wait(5);
-      await auctionHouse.deploymentTransaction().wait(5);
+      // await stakeX.deploymentTransaction().wait(5);
+      await stakingPool.deploymentTransaction().wait(5);
 
-      // Verify CustomToken
+      // // Verify StakeX
+      // try {
+      //   await hre.run("verify:verify", {
+      //     address: await stakeX.getAddress(),
+      //     constructorArguments: [taskArgs.owner],
+      //   });
+      //   console.log("StakeX verified successfully");
+      // } catch (error) {
+      //   console.log("StakeX verification failed:", error.message);
+      // }
+
+      // Verify StakingPool
       try {
         await hre.run("verify:verify", {
-          address: await customToken.getAddress(),
-          constructorArguments: [taskArgs.owner],
-        });
-        console.log("CustomToken verified successfully");
-      } catch (error) {
-        console.log("CustomToken verification failed:", error.message);
-      }
-
-      // Verify AuctionHouse
-      try {
-        await hre.run("verify:verify", {
-          address: await auctionHouse.getAddress(),
+          address: await stakingPool.getAddress(),
           constructorArguments: [],
         });
-        console.log("auctionHouse verified successfully");
+        console.log("stakingPool verified successfully");
       } catch (error) {
-        console.log("auctionHouse verification failed:", error.message);
+        console.log("stakingPool verification failed:", error.message);
       }
     }
 
     console.log("\nDeployment Summary:");
     console.log("-------------------");
-    console.log("CustomToken:", await customToken.getAddress());
-    console.log("auctionHouse:", await auctionHouse.getAddress());
+    // console.log("StakeX:", await stakeX.getAddress());
+    console.log("stakingPool:", await stakingPool.getAddress());
   });
